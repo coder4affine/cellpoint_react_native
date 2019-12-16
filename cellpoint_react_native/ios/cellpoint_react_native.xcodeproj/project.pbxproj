@@ -12,14 +12,14 @@
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		276C8307B05222D6C53ED5D3 /* libPods-cellpoint_react_native.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 910FF2F58D42DFC0D2C296D5 /* libPods-cellpoint_react_native.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* cellpoint_react_nativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* cellpoint_react_nativeTests.m */; };
-		508E4C426CA7DF0B29EEAB63 /* libPods-cellpoint_react_nativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FFB3EAE5E24B5EE2AFE9B58E /* libPods-cellpoint_react_nativeTests.a */; };
-		AA0CB4C721DD283A32B6AD54 /* libPods-cellpoint_react_native-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FE3FFEF6FD1B94E749BDA33 /* libPods-cellpoint_react_native-tvOS.a */; };
-		B2EF5F235FA7607DB30F755C /* libPods-cellpoint_react_native-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A4A3A8EBA7CDA0D8751D7842 /* libPods-cellpoint_react_native-tvOSTests.a */; };
-		EAB5E76A0229A222531DC3A4 /* libPods-cellpoint_react_native.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F419EB547B23742FDBA494 /* libPods-cellpoint_react_native.a */; };
+		AFCC0A6D0B937DD93A0BF920 /* libPods-cellpoint_react_native-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16BB81582DBB3980D5533D6E /* libPods-cellpoint_react_native-tvOS.a */; };
+		B8AFA519D58CF6DE8AF8601D /* libPods-cellpoint_react_nativeTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1064FCABDB9D9C467E722EC7 /* libPods-cellpoint_react_nativeTests.a */; };
+		C272C3E8470F6E89CD250327 /* libPods-cellpoint_react_native-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F28ACC2FEA451EFF330F9E /* libPods-cellpoint_react_native-tvOSTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +44,7 @@
 		00E356EE1AD99517003FC87E /* cellpoint_react_nativeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cellpoint_react_nativeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* cellpoint_react_nativeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cellpoint_react_nativeTests.m; sourceTree = "<group>"; };
+		1064FCABDB9D9C467E722EC7 /* libPods-cellpoint_react_nativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cellpoint_react_nativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07F961A680F5B00A75B9A /* cellpoint_react_native.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cellpoint_react_native.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = cellpoint_react_native/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = cellpoint_react_native/AppDelegate.m; sourceTree = "<group>"; };
@@ -51,22 +52,21 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = cellpoint_react_native/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = cellpoint_react_native/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = cellpoint_react_native/main.m; sourceTree = "<group>"; };
-		1FE3FFEF6FD1B94E749BDA33 /* libPods-cellpoint_react_native-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cellpoint_react_native-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		16BB81582DBB3980D5533D6E /* libPods-cellpoint_react_native-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cellpoint_react_native-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E47B1E0B4A5D006451C7 /* cellpoint_react_native-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cellpoint_react_native-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* cellpoint_react_native-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "cellpoint_react_native-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E468C6BE15F47B05EED1A04 /* Pods-cellpoint_react_native.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_native.debug.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_native/Pods-cellpoint_react_native.debug.xcconfig"; sourceTree = "<group>"; };
-		3E469AF5F7EF993D2F009609 /* Pods-cellpoint_react_native.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_native.release.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_native/Pods-cellpoint_react_native.release.xcconfig"; sourceTree = "<group>"; };
-		58B420748713FE9A38925461 /* Pods-cellpoint_react_nativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_nativeTests.release.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_nativeTests/Pods-cellpoint_react_nativeTests.release.xcconfig"; sourceTree = "<group>"; };
-		59B0884E276A0564D3660465 /* Pods-cellpoint_react_native-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_native-tvOS.release.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_native-tvOS/Pods-cellpoint_react_native-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		83F85833298045AF749FCFC6 /* Pods-cellpoint_react_native-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_native-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_native-tvOS/Pods-cellpoint_react_native-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
-		A4A3A8EBA7CDA0D8751D7842 /* libPods-cellpoint_react_native-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cellpoint_react_native-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		B21948F5352027AAD59AACDA /* Pods-cellpoint_react_native-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_native-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_native-tvOSTests/Pods-cellpoint_react_native-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
-		B3B9B71C77769E6EF9DCD827 /* Pods-cellpoint_react_nativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_nativeTests.debug.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_nativeTests/Pods-cellpoint_react_nativeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		D0F419EB547B23742FDBA494 /* libPods-cellpoint_react_native.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cellpoint_react_native.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5B3AB2548ABA86448F84D7B /* Pods-cellpoint_react_native-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_native-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_native-tvOSTests/Pods-cellpoint_react_native-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F6B7BD4940C1D0F62DE8E57 /* Pods-cellpoint_react_nativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_nativeTests.debug.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_nativeTests/Pods-cellpoint_react_nativeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3ABEA906A40845581564D36F /* Pods-cellpoint_react_native-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_native-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_native-tvOSTests/Pods-cellpoint_react_native-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		82F28ACC2FEA451EFF330F9E /* libPods-cellpoint_react_native-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cellpoint_react_native-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		910FF2F58D42DFC0D2C296D5 /* libPods-cellpoint_react_native.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cellpoint_react_native.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A73A0AAE72120B34B34D4517 /* Pods-cellpoint_react_native-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_native-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_native-tvOS/Pods-cellpoint_react_native-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		B8CA6D2F5ACB01AE24C47D83 /* Pods-cellpoint_react_native.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_native.release.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_native/Pods-cellpoint_react_native.release.xcconfig"; sourceTree = "<group>"; };
+		CB598D480531E3D6235787C7 /* Pods-cellpoint_react_native.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_native.debug.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_native/Pods-cellpoint_react_native.debug.xcconfig"; sourceTree = "<group>"; };
+		D7695668118E899F88BF5FFD /* Pods-cellpoint_react_native-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_native-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_native-tvOSTests/Pods-cellpoint_react_native-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		DA2AD45B4739B47D4AFE11A8 /* Pods-cellpoint_react_nativeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_nativeTests.release.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_nativeTests/Pods-cellpoint_react_nativeTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		FFB3EAE5E24B5EE2AFE9B58E /* libPods-cellpoint_react_nativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-cellpoint_react_nativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC6BA3F90EA12DB48AFFEBD4 /* Pods-cellpoint_react_native-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cellpoint_react_native-tvOS.release.xcconfig"; path = "Target Support Files/Pods-cellpoint_react_native-tvOS/Pods-cellpoint_react_native-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,7 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				508E4C426CA7DF0B29EEAB63 /* libPods-cellpoint_react_nativeTests.a in Frameworks */,
+				B8AFA519D58CF6DE8AF8601D /* libPods-cellpoint_react_nativeTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAB5E76A0229A222531DC3A4 /* libPods-cellpoint_react_native.a in Frameworks */,
+				276C8307B05222D6C53ED5D3 /* libPods-cellpoint_react_native.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,7 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA0CB4C721DD283A32B6AD54 /* libPods-cellpoint_react_native-tvOS.a in Frameworks */,
+				AFCC0A6D0B937DD93A0BF920 /* libPods-cellpoint_react_native-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2EF5F235FA7607DB30F755C /* libPods-cellpoint_react_native-tvOSTests.a in Frameworks */,
+				C272C3E8470F6E89CD250327 /* libPods-cellpoint_react_native-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,25 +141,25 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				D0F419EB547B23742FDBA494 /* libPods-cellpoint_react_native.a */,
-				1FE3FFEF6FD1B94E749BDA33 /* libPods-cellpoint_react_native-tvOS.a */,
-				A4A3A8EBA7CDA0D8751D7842 /* libPods-cellpoint_react_native-tvOSTests.a */,
-				FFB3EAE5E24B5EE2AFE9B58E /* libPods-cellpoint_react_nativeTests.a */,
+				910FF2F58D42DFC0D2C296D5 /* libPods-cellpoint_react_native.a */,
+				16BB81582DBB3980D5533D6E /* libPods-cellpoint_react_native-tvOS.a */,
+				82F28ACC2FEA451EFF330F9E /* libPods-cellpoint_react_native-tvOSTests.a */,
+				1064FCABDB9D9C467E722EC7 /* libPods-cellpoint_react_nativeTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5DC94E9292E2D12C3D8DB08F /* Pods */ = {
+		31DA552CAD4A14AE4AA1E1D2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2E468C6BE15F47B05EED1A04 /* Pods-cellpoint_react_native.debug.xcconfig */,
-				3E469AF5F7EF993D2F009609 /* Pods-cellpoint_react_native.release.xcconfig */,
-				83F85833298045AF749FCFC6 /* Pods-cellpoint_react_native-tvOS.debug.xcconfig */,
-				59B0884E276A0564D3660465 /* Pods-cellpoint_react_native-tvOS.release.xcconfig */,
-				D5B3AB2548ABA86448F84D7B /* Pods-cellpoint_react_native-tvOSTests.debug.xcconfig */,
-				B21948F5352027AAD59AACDA /* Pods-cellpoint_react_native-tvOSTests.release.xcconfig */,
-				B3B9B71C77769E6EF9DCD827 /* Pods-cellpoint_react_nativeTests.debug.xcconfig */,
-				58B420748713FE9A38925461 /* Pods-cellpoint_react_nativeTests.release.xcconfig */,
+				CB598D480531E3D6235787C7 /* Pods-cellpoint_react_native.debug.xcconfig */,
+				B8CA6D2F5ACB01AE24C47D83 /* Pods-cellpoint_react_native.release.xcconfig */,
+				A73A0AAE72120B34B34D4517 /* Pods-cellpoint_react_native-tvOS.debug.xcconfig */,
+				FC6BA3F90EA12DB48AFFEBD4 /* Pods-cellpoint_react_native-tvOS.release.xcconfig */,
+				3ABEA906A40845581564D36F /* Pods-cellpoint_react_native-tvOSTests.debug.xcconfig */,
+				D7695668118E899F88BF5FFD /* Pods-cellpoint_react_native-tvOSTests.release.xcconfig */,
+				2F6B7BD4940C1D0F62DE8E57 /* Pods-cellpoint_react_nativeTests.debug.xcconfig */,
+				DA2AD45B4739B47D4AFE11A8 /* Pods-cellpoint_react_nativeTests.release.xcconfig */,
 			);
 			name = Pods;
 			path = Pods;
@@ -180,7 +180,7 @@
 				00E356EF1AD99517003FC87E /* cellpoint_react_nativeTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
-				5DC94E9292E2D12C3D8DB08F /* Pods */,
+				31DA552CAD4A14AE4AA1E1D2 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -205,7 +205,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "cellpoint_react_nativeTests" */;
 			buildPhases = (
-				526B3C3C5B6F5B2B746E75C8 /* [CP] Check Pods Manifest.lock */,
+				5F7A3B00E56FE5B1BC5F13FE /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
@@ -224,7 +224,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "cellpoint_react_native" */;
 			buildPhases = (
-				0D82B8DB575165033CB0EC8B /* [CP] Check Pods Manifest.lock */,
+				C678C6250A4C1F6BC3E6DF2E /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
@@ -244,7 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "cellpoint_react_native-tvOS" */;
 			buildPhases = (
-				5D66E3F97EFAB9850F0F1AC2 /* [CP] Check Pods Manifest.lock */,
+				A5EC5D6220E8F738A105A85C /* [CP] Check Pods Manifest.lock */,
 				FD10A7F122414F3F0027D42C /* Start Packager */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
@@ -264,7 +264,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "cellpoint_react_native-tvOSTests" */;
 			buildPhases = (
-				C45B7A03F34C1E3D75F374AB /* [CP] Check Pods Manifest.lock */,
+				26B39093759EC19C6FBD2CB8 /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
@@ -373,7 +373,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		0D82B8DB575165033CB0EC8B /* [CP] Check Pods Manifest.lock */ = {
+		26B39093759EC19C6FBD2CB8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -388,7 +388,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-cellpoint_react_native-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-cellpoint_react_native-tvOSTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -409,7 +409,7 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
-		526B3C3C5B6F5B2B746E75C8 /* [CP] Check Pods Manifest.lock */ = {
+		5F7A3B00E56FE5B1BC5F13FE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -431,7 +431,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5D66E3F97EFAB9850F0F1AC2 /* [CP] Check Pods Manifest.lock */ = {
+		A5EC5D6220E8F738A105A85C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,7 +453,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C45B7A03F34C1E3D75F374AB /* [CP] Check Pods Manifest.lock */ = {
+		C678C6250A4C1F6BC3E6DF2E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -468,7 +468,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-cellpoint_react_native-tvOSTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-cellpoint_react_native-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -580,7 +580,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3B9B71C77769E6EF9DCD827 /* Pods-cellpoint_react_nativeTests.debug.xcconfig */;
+			baseConfigurationReference = 2F6B7BD4940C1D0F62DE8E57 /* Pods-cellpoint_react_nativeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -603,7 +603,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58B420748713FE9A38925461 /* Pods-cellpoint_react_nativeTests.release.xcconfig */;
+			baseConfigurationReference = DA2AD45B4739B47D4AFE11A8 /* Pods-cellpoint_react_nativeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -623,7 +623,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2E468C6BE15F47B05EED1A04 /* Pods-cellpoint_react_native.debug.xcconfig */;
+			baseConfigurationReference = CB598D480531E3D6235787C7 /* Pods-cellpoint_react_native.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -643,7 +643,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E469AF5F7EF993D2F009609 /* Pods-cellpoint_react_native.release.xcconfig */;
+			baseConfigurationReference = B8CA6D2F5ACB01AE24C47D83 /* Pods-cellpoint_react_native.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -662,7 +662,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 83F85833298045AF749FCFC6 /* Pods-cellpoint_react_native-tvOS.debug.xcconfig */;
+			baseConfigurationReference = A73A0AAE72120B34B34D4517 /* Pods-cellpoint_react_native-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -690,7 +690,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59B0884E276A0564D3660465 /* Pods-cellpoint_react_native-tvOS.release.xcconfig */;
+			baseConfigurationReference = FC6BA3F90EA12DB48AFFEBD4 /* Pods-cellpoint_react_native-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -718,7 +718,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5B3AB2548ABA86448F84D7B /* Pods-cellpoint_react_native-tvOSTests.debug.xcconfig */;
+			baseConfigurationReference = 3ABEA906A40845581564D36F /* Pods-cellpoint_react_native-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -745,7 +745,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B21948F5352027AAD59AACDA /* Pods-cellpoint_react_native-tvOSTests.release.xcconfig */;
+			baseConfigurationReference = D7695668118E899F88BF5FFD /* Pods-cellpoint_react_native-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;

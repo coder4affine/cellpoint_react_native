@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {memo} from 'react';
 import PropTypes from 'prop-types';
 import {View, Text} from 'react-native';
 
@@ -38,7 +38,7 @@ Button.defaultProps = {
   title: 'Submit',
 };
 
-export default Button;
+export default memo(Button);
 
 // import React, {Component} from 'react';
 // import {Text, View} from 'react-native';

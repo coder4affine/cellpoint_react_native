@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 import {
   TextInput as RNTextInput,
   StyleSheet,
@@ -8,7 +8,7 @@ import {
 import Visibility from '../../assets/icons/visibility.svg';
 import VisibilityOff from '../../assets/icons/visibility_off.svg';
 
-export default class TextInput extends Component {
+export default class TextInput extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -16,15 +16,55 @@ export default class TextInput extends Component {
       isFocused: false,
       secureTextEntry: props.secureTextEntry,
     };
+    console.log('constructor');
+    // Api call
+  }
+
+  static getDerivedStateFromProps(props, state) {
+    console.log('getDerivedStateFromProps');
+    console.log(props);
+    console.log(state);
+    return null;
+  }
+
+  componentDidMount() {
+    console.log('componentDidMount');
+    this.rnTextInput.focus();
+
+    this.timeout = setTimeout(() => {}, 1000);
+
+    document.addEventListener('copy', () => {});
+  }
+
+  // shouldComponentUpdate(nextProps, nextState) {
+  //   if (
+  //     this.state.text !== nextState.text ||
+  //     this.state.secureTextEntry !== nextState.secureTextEntry
+  //   ) {
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  //   // return false;
+  // }
+
+  componentDidUpdate(prevProps, prevState) {}
+
+  componentWillUnmount() {
+    clearTimeout(this.timeout);
+    document.removeEventListener('copy', () => {});
   }
 
   render() {
-    console.warn('render');
+    console.log('render');
     const {isFocused, text, secureTextEntry} = this.state;
     const {secureTextEntry: propsSecureTextEntry} = this.props;
     return (
       <View style={{justifyContent: 'center'}}>
         <RNTextInput
+          ref={ref => {
+            this.rnTextInput = ref;
+          }}
           value={text}
           style={{
             borderWidth: StyleSheet.hairlineWidth,

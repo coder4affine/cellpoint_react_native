@@ -8,12 +8,7 @@ const App = () => {
     <SafeAreaView>
       <Text>Hello World</Text>
       <Button title="Login" caption="Please Login" />
-      <TextInput />
       <TextInput secureTextEntry />
-      <TextInput />
-      <TextInput />
-      <TextInput />
-      <TextInput />
     </SafeAreaView>
   );
 };

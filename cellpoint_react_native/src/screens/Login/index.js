@@ -1,15 +1,34 @@
 import React, {Component} from 'react';
-import {View, Image, PixelRatio, SafeAreaView} from 'react-native';
+import {
+  View,
+  Image,
+  PixelRatio,
+  SafeAreaView,
+  ActivityIndicator,
+} from 'react-native';
+import {connect} from 'react-redux';
 import FastImage from 'react-native-fast-image';
 import Text from '../../components/text/Text';
 import Button from '../../components/button/Button';
 import styles from './styles';
 import theme from '../../utils/theme';
 
-export default class Login extends Component {
+class Login extends Component {
+  componentDidMount() {
+    this.props.loadUsers();
+  }
+
   render() {
+    const {loading} = this.props.users;
+
     return (
       <SafeAreaView style={styles.container}>
+        {loading && (
+          <View
+            style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+            <ActivityIndicator animating={true} size="large" />
+          </View>
+        )}
         <View style={{flex: 3, justifyContent: 'center', alignItems: 'center'}}>
           <FastImage
             source={require('../../assets/images/checked.png')}
@@ -25,11 +44,12 @@ export default class Login extends Component {
         </View>
         <View style={{flex: 2}}>
           <Button
-            onPress={() => {}}
+            onPress={() => this.props.navigation.navigate('Register')}
             containerStyle={{backgroundColor: theme.primary.main}}
             textStyle={{color: theme.primary.contrastText}}
           />
           <Button
+            onPress={() => this.props.changeLocale({locale: 'es'})}
             containerStyle={{
               backgroundColor: 'transparent',
               borderWidth: 0.5,
@@ -45,3 +65,19 @@ export default class Login extends Component {
     );
   }
 }
+
+function mapStateToProps(state) {
+  return {
+    locale: state.locale,
+    users: state.users,
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    changeLocale: payload => dispatch({type: 'CHANGE_LOCALE', payload}),
+    loadUsers: () => dispatch({type: 'LOAD_USERS_REQUEST'}),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);

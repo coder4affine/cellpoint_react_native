@@ -33,7 +33,7 @@ export default class TextInput extends PureComponent {
 
     this.timeout = setTimeout(() => {}, 1000);
 
-    document.addEventListener('copy', () => {});
+    // document.addEventListener('copy', () => {});
   }
 
   // shouldComponentUpdate(nextProps, nextState) {
@@ -52,7 +52,7 @@ export default class TextInput extends PureComponent {
 
   componentWillUnmount() {
     clearTimeout(this.timeout);
-    document.removeEventListener('copy', () => {});
+    // document.removeEventListener('copy', () => {});
   }
 
   render() {

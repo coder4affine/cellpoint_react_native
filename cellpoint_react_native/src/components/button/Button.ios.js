@@ -1,32 +1,32 @@
 import React, {memo} from 'react';
 import PropTypes from 'prop-types';
-import {View, Text} from 'react-native';
+import {TouchableHighlight} from 'react-native';
+import Text from '../text/Text';
 
-const Button = ({title, caption}) => {
+const Button = ({title, caption, containerStyle, textStyle, ...props}) => {
   return (
-    <View
-      style={{
-        backgroundColor: 'green',
-        height: 44,
-        justifyContent: 'center',
-        alignItems: 'center',
-        margin: 10,
-        borderRadius: 4,
-      }}>
+    <TouchableHighlight
+      {...props}
+      style={[
+        {
+          backgroundColor: 'green',
+          height: 44,
+          justifyContent: 'center',
+          alignItems: 'center',
+          margin: 10,
+          borderRadius: 4,
+        },
+        containerStyle,
+      ]}>
       <Text
-        style={{fontSize: 16, fontWeight: '500', marginHorizontal: 20}}
+        style={textStyle}
+        variant="buttonText"
         numberOfLines={1}
         selectable={true}
         ellipsizeMode="tail">
         {title}
       </Text>
-      <Text
-        style={{fontSize: 16, fontWeight: '500', marginHorizontal: 20}}
-        numberOfLines={1}
-        ellipsizeMode="tail">
-        {caption}
-      </Text>
-    </View>
+    </TouchableHighlight>
   );
 };
 

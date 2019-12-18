@@ -1,4 +1,4 @@
-export default (state = {}, {type}) => {
+export default (state = {}, { type }) => {
   const matches = /(.*)_(REQUEST|SUCCESS|FAIL)/.exec(type);
   if (!matches) {
     return state;
@@ -7,8 +7,8 @@ export default (state = {}, {type}) => {
   const [, requestName, requestState] = matches;
 
   if (requestState === 'REQUEST') {
-    return {...state, [requestName]: true};
+    return { ...state, [requestName]: true };
   }
-  const {[requestName]: data, ...rest} = state;
+  const { [requestName]: data, ...rest } = state;
   return rest;
 };

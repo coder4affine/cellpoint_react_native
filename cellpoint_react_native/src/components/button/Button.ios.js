@@ -1,9 +1,9 @@
-import React, {memo} from 'react';
+import React, { memo } from 'react';
 import PropTypes from 'prop-types';
-import {TouchableHighlight} from 'react-native';
+import { TouchableHighlight } from 'react-native';
 import Text from '../text/Text';
 
-const Button = ({title, caption, containerStyle, textStyle, ...props}) => {
+const Button = ({ title, caption, containerStyle, textStyle, ...props }) => {
   return (
     <TouchableHighlight
       {...props}
@@ -17,13 +17,15 @@ const Button = ({title, caption, containerStyle, textStyle, ...props}) => {
           borderRadius: 4,
         },
         containerStyle,
-      ]}>
+      ]}
+    >
       <Text
         style={textStyle}
         variant="buttonText"
         numberOfLines={1}
-        selectable={true}
-        ellipsizeMode="tail">
+        selectable
+        ellipsizeMode="tail"
+      >
         {title}
       </Text>
     </TouchableHighlight>
@@ -32,10 +34,16 @@ const Button = ({title, caption, containerStyle, textStyle, ...props}) => {
 
 Button.propTypes = {
   title: PropTypes.string,
+  caption: PropTypes.string,
+  containerStyle: PropTypes.object,
+  textStyle: PropTypes.object,
 };
 
 Button.defaultProps = {
   title: 'Submit',
+  caption: '',
+  containerStyle: {},
+  textStyle: {},
 };
 
 export default memo(Button);

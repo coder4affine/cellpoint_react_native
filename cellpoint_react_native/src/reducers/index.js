@@ -1,6 +1,6 @@
-import {combineReducers} from 'redux';
-import {createNavigationReducer} from 'react-navigation-redux-helpers';
-import {App} from '../route';
+import { combineReducers } from 'redux';
+import { createNavigationReducer } from 'react-navigation-redux-helpers';
+import { App } from '../route';
 import locale from './localeReducer';
 import users from './usersReducer';
 import errors from './errorReducer';

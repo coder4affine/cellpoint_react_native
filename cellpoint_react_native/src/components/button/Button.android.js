@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {View, Text} from 'react-native';
+import { View, Text } from 'react-native';
 
-const Button = ({title, caption}) => {
+const Button = ({ title, caption }) => {
   return (
     <View
       style={{
@@ -12,18 +12,21 @@ const Button = ({title, caption}) => {
         alignItems: 'center',
         margin: 10,
         borderRadius: 4,
-      }}>
+      }}
+    >
       <Text
-        style={{fontSize: 16, fontWeight: '500', marginHorizontal: 20}}
+        style={{ fontSize: 16, fontWeight: '500', marginHorizontal: 20 }}
         numberOfLines={1}
-        selectable={true}
-        ellipsizeMode="tail">
+        selectable
+        ellipsizeMode="tail"
+      >
         {title}
       </Text>
       <Text
-        style={{fontSize: 16, fontWeight: '500', marginHorizontal: 20}}
+        style={{ fontSize: 16, fontWeight: '500', marginHorizontal: 20 }}
         numberOfLines={1}
-        ellipsizeMode="tail">
+        ellipsizeMode="tail"
+      >
         {caption}
       </Text>
     </View>
@@ -32,10 +35,12 @@ const Button = ({title, caption}) => {
 
 Button.propTypes = {
   title: PropTypes.string,
+  caption: PropTypes.string,
 };
 
 Button.defaultProps = {
   title: 'Submit',
+  caption: '',
 };
 
 export default Button;

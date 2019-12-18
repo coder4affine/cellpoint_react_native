@@ -1,11 +1,13 @@
 import React from 'react';
-import {View, TextInput as RNTextInput} from 'react-native';
-import {ErrorMessage} from 'formik';
+import PropTypes from 'prop-types';
+
+import { View, TextInput as RNTextInput } from 'react-native';
+import { ErrorMessage } from 'formik';
 import Text from '../text/Text';
 
 const TextInput = ({
   field, // { name, value, onChange, onBlur }
-  form: {touched, errors, setFieldValue}, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
+  form: { setFieldValue }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
   ...props
 }) => {
   return (
@@ -24,11 +26,21 @@ const TextInput = ({
         {...field}
         {...props}
       />
-      <ErrorMessage name={field.name}>
-        {msg => <Text variant="error">{msg}</Text>}
-      </ErrorMessage>
+      <ErrorMessage name={field.name}>{msg => <Text variant="error">{msg}</Text>}</ErrorMessage>
     </View>
   );
+};
+
+TextInput.propTypes = {
+  field: PropTypes.objectOf({
+    name: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onBlur: PropTypes.func.isRequired,
+  }).isRequired,
+  form: PropTypes.objectOf({
+    setFieldValue: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
 export default TextInput;

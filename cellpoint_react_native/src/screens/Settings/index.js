@@ -1,11 +1,12 @@
-import React, {Component} from 'react';
-import {Text, View, Button} from 'react-native';
+/* eslint-disable */
+import React, { Component } from 'react';
+import { Text, View, Button } from 'react-native';
 
 export default class Settings extends Component {
   displayName = 'Settings';
 
   onButtonPress = () => {
-    const {replace} = this.props.navigation;
+    const { replace } = this.props.navigation;
     replace('Dashboard');
   };
 

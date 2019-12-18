@@ -1,8 +1,9 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/display-name */
 import React from 'react';
-import {Text} from 'react-native';
-import {createAppContainer, createSwitchNavigator} from 'react-navigation';
-import {createStackNavigator} from 'react-navigation-stack';
-import {createBottomTabNavigator} from 'react-navigation-tabs';
+import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
 import HomeScreen from './screens/Home';
 import SettingsScreen from './screens/Settings';
 import DashboardScreen from './screens/Dashboard';
@@ -27,20 +28,19 @@ const TabNavigator = createBottomTabNavigator(
     },
   },
   {
-    defaultNavigationOptions: ({navigation}) => ({
-      tabBarIcon: ({focused, horizontal, tintColor}) => {
-        const {routeName} = navigation.state;
+    defaultNavigationOptions: ({ navigation }) => ({
+      tabBarIcon: ({ tintColor }) => {
+        const { routeName } = navigation.state;
         if (routeName === 'Home') {
-          return <HomeIcon height={24} width={24} style={{color: tintColor}} />;
-        } else if (routeName === 'Settings') {
-          return (
-            <SettingsIcon height={24} width={24} style={{color: tintColor}} />
-          );
-        } else if (routeName === 'Dashboard') {
-          return (
-            <DashboardIcon height={24} width={24} style={{color: tintColor}} />
-          );
+          return <HomeIcon height={24} width={24} style={{ color: tintColor }} />;
         }
+        if (routeName === 'Settings') {
+          return <SettingsIcon height={24} width={24} style={{ color: tintColor }} />;
+        }
+        if (routeName === 'Dashboard') {
+          return <DashboardIcon height={24} width={24} style={{ color: tintColor }} />;
+        }
+        return null;
       },
     }),
     tabBarOptions: {

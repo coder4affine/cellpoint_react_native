@@ -1,4 +1,4 @@
-export default (state = {}, {type, payload}) => {
+export default (state = {}, { type, payload }) => {
   const matches = /(.*)_(REQUEST|FAIL)/.exec(type);
   if (!matches) {
     return state;
@@ -7,8 +7,8 @@ export default (state = {}, {type, payload}) => {
   const [, requestName, requestState] = matches;
 
   if (requestState === 'FAIL') {
-    return {...state, [requestName]: payload.message};
+    return { ...state, [requestName]: payload.message };
   }
-  const {[requestName]: data, ...rest} = state;
+  const { [requestName]: data, ...rest } = state;
   return rest;
 };

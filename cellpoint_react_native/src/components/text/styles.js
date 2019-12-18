@@ -1,5 +1,5 @@
-import {StyleSheet} from 'react-native';
-import {normalize} from '../../utils';
+import { StyleSheet } from 'react-native';
+import { normalize } from '../../utils';
 
 const styles = StyleSheet.create({
   header: {

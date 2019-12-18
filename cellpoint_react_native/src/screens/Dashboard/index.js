@@ -1,7 +1,9 @@
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import PropTypes from 'prop-types';
 
-const Dashboard = ({navigation: {popToTop}}) => {
+import { View, Text, Button } from 'react-native';
+
+const Dashboard = ({ navigation: { popToTop } }) => {
   const buttonPress = () => {
     popToTop();
   };
@@ -12,6 +14,12 @@ const Dashboard = ({navigation: {popToTop}}) => {
       <Button title="Go To Home" onPress={buttonPress} />
     </View>
   );
+};
+
+Dashboard.propTypes = {
+  navigation: PropTypes.objectOf({
+    popToTop: PropTypes.func.isRequired,
+  }).isRequired,
 };
 
 export default Dashboard;

@@ -1,11 +1,11 @@
+/* eslint-disable */
 import React from 'react';
-import {View, FlatList} from 'react-native';
-import {connect} from 'react-redux';
+import { View, FlatList } from 'react-native';
+import { connect } from 'react-redux';
 import Text from '../../components/text/Text';
 
-const Users = ({users}) => {
-  const renderItem = ({item}) => {
-    console.warn('item', item);
+const Users = ({ users }) => {
+  const renderItem = ({ item }) => {
     return (
       <View>
         <Text variant="error">{item.id}</Text>
@@ -16,13 +16,7 @@ const Users = ({users}) => {
   };
   const keyExtractor = item => `${item.id}`;
 
-  return (
-    <FlatList
-      data={users}
-      renderItem={renderItem}
-      keyExtractor={keyExtractor}
-    />
-  );
+  return <FlatList data={users} renderItem={renderItem} keyExtractor={keyExtractor} />;
 };
 
 function mapStateToProps(state) {
@@ -31,7 +25,7 @@ function mapStateToProps(state) {
   };
 }
 
-function mapDispatchToProps(dispatch) {
+function mapDispatchToProps() {
   return {};
 }
 

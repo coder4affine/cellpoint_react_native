@@ -1,0 +1,13 @@
+{
+  "telemetry.enableTelemetry": true,
+  "git.ignoreLimitWarning": true,
+  "[javascript]": { "editor.formatOnSave": true },
+  "javascript.validate.enable": false,
+  "javascript.format.enable": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html"
+  },
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true
+}

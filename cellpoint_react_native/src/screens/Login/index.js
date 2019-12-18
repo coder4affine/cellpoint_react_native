@@ -1,17 +1,12 @@
 import React, {Component} from 'react';
-import {
-  View,
-  Image,
-  PixelRatio,
-  SafeAreaView,
-  ActivityIndicator,
-} from 'react-native';
+import {View, PixelRatio, SafeAreaView, ActivityIndicator} from 'react-native';
 import {connect} from 'react-redux';
 import FastImage from 'react-native-fast-image';
 import Text from '../../components/text/Text';
 import Button from '../../components/button/Button';
 import styles from './styles';
 import theme from '../../utils/theme';
+import {LOAD_USERS, REQUEST} from '../../constants/actionTypes';
 
 class Login extends Component {
   componentDidMount() {
@@ -19,13 +14,11 @@ class Login extends Component {
   }
 
   render() {
-    const {loading} = this.props.users;
-
+    const {loading} = this.props;
     return (
       <SafeAreaView style={styles.container}>
         {loading && (
-          <View
-            style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+          <View style={{justifyContent: 'center', alignItems: 'center'}}>
             <ActivityIndicator animating={true} size="large" />
           </View>
         )}
@@ -70,13 +63,14 @@ function mapStateToProps(state) {
   return {
     locale: state.locale,
     users: state.users,
+    loading: state.loading[LOAD_USERS],
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     changeLocale: payload => dispatch({type: 'CHANGE_LOCALE', payload}),
-    loadUsers: () => dispatch({type: 'LOAD_USERS_REQUEST'}),
+    loadUsers: () => dispatch({type: `${LOAD_USERS}_${REQUEST}`}),
   };
 }
 

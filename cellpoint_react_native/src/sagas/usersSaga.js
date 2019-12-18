@@ -6,6 +6,7 @@ import {
   FAIL,
   REQUEST,
 } from '../constants/actionTypes';
+import {NavigationActions} from 'react-navigation';
 
 function* loadUsers() {
   try {
@@ -33,7 +34,11 @@ function* registerUser({payload, meta}) {
     const user = yield res.json();
     yield put({type: `${REGISTER_USER}_${SUCCESS}`, payload: user});
     yield call(resetForm);
-    yield call(setStatus, {successMessage: 'User Saved'});
+    const navigateAction = NavigationActions.navigate({
+      routeName: 'Users',
+    });
+
+    yield put(navigateAction);
   } catch (error) {
     yield put({type: `${REGISTER_USER}_${FAIL}`, payload: error});
     yield call(setStatus, {successMessage: error.message});

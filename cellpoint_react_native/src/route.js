@@ -8,6 +8,7 @@ import SettingsScreen from './screens/Settings';
 import DashboardScreen from './screens/Dashboard';
 import LoginScreen from './screens/Login';
 import RegisterScreen from './screens/Register';
+import UsersScreen from './screens/Users';
 import Modal from './screens/Modal';
 import DashboardIcon from './assets/icons/dashboard.svg';
 import HomeIcon from './assets/icons/home.svg';
@@ -67,6 +68,14 @@ const MainNavigator = createStackNavigator(
         };
       },
     },
+    Users: {
+      screen: UsersScreen,
+      navigationOptions: () => {
+        return {
+          headerTransparent: true,
+        };
+      },
+    },
   },
   {
     defaultNavigationOptions: () => {
@@ -96,7 +105,7 @@ const AppNavigator = createStackNavigator(
   },
 );
 
-const App = createSwitchNavigator({
+export const App = createSwitchNavigator({
   Login: {
     screen: MainNavigator,
   },

@@ -1,13 +1,51 @@
+/* eslint-disable import/extensions */
+/* eslint-disable import/no-unresolved */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { View } from 'react-native';
+import { Formik, Field } from 'formik';
+import TextInput from '../../components/textInput/TextInput';
+import Button from '../../components/button/Button';
+import { ADD_PRODUCT, REQUEST } from '../../constants/actionTypes';
 
-import { Text, View, Button } from 'react-native';
+const fields = [
+  {
+    name: 'productName',
+    component: TextInput,
+    validate: value => {
+      let errorMessage = '';
+      if (!value) {
+        errorMessage = 'Required';
+      }
+      if (value.length < 3) {
+        errorMessage = 'Min Length 3';
+      }
+      return errorMessage;
+    },
+  },
+  {
+    name: 'productPrice',
+    component: TextInput,
+    validate: value => {
+      let errorMessage = '';
+      if (!value) {
+        errorMessage = 'Required';
+      }
+      if (!/\d/i.test(value)) {
+        errorMessage = 'Invalid Entry';
+      }
+      return errorMessage;
+    },
+  },
+];
 
-export default class Home extends Component {
+class Home extends Component {
   displayName = 'Home';
 
   static propTypes = {
     navigation: PropTypes.object.isRequired,
+    addProduct: PropTypes.func.isRequired,
   };
 
   onButtonPress = path => {
@@ -18,14 +56,41 @@ export default class Home extends Component {
   };
 
   render() {
+    const { addProduct } = this.props;
     return (
       <View>
-        <Text> textInComponent </Text>
-        <Button title="Go To Settings" onPress={() => this.onButtonPress('Settings')} />
-        <Button title="Go To Modal" onPress={() => this.onButtonPress('Modal')} />
-        <Button title="Go To App" onPress={() => this.onButtonPress('App')} />
-        <Button title="Go To Login" onPress={() => this.onButtonPress('Login')} />
+        <Formik
+          initialValues={{
+            productName: '',
+            productPrice: '',
+          }}
+          onSubmit={addProduct}
+        >
+          {({ handleSubmit }) => {
+            return (
+              <View>
+                {fields.map(x => (
+                  <Field key={x.name} {...x} />
+                ))}
+                <Button title="Submit" onPress={handleSubmit} />
+              </View>
+            );
+          }}
+        </Formik>
       </View>
     );
   }
 }
+
+function mapStateToProps() {
+  return {};
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    addProduct: (values, actions) =>
+      dispatch({ type: `${ADD_PRODUCT}_${REQUEST}`, payload: values, meta: actions }),
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

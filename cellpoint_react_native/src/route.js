@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable react/display-name */
 import React from 'react';
-import { createAppContainer, createSwitchNavigator } from 'react-navigation';
+import { createReduxContainer } from 'react-navigation-redux-helpers';
+import { createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import HomeScreen from './screens/Home';
@@ -114,4 +115,4 @@ export const App = createSwitchNavigator({
   },
 });
 
-export default createAppContainer(App);
+export default createReduxContainer(App);

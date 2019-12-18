@@ -1,16 +1,14 @@
 import React from 'react';
-import {createReduxContainer} from 'react-navigation-redux-helpers';
-import {Provider, connect} from 'react-redux';
-import ThemeContext from './src/context/themeContext';
+
+import { Provider, connect } from 'react-redux';
 import Navigation from './src/route';
 import store from './src/configureStore';
 
-const NavApp = createReduxContainer(Navigation);
 const mapStateToProps = state => ({
   state: state.nav,
 });
 
-const AppWithNavigationState = connect(mapStateToProps)(NavApp);
+const AppWithNavigationState = connect(mapStateToProps)(Navigation);
 
 const App = () => {
   return (

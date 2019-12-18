@@ -5,6 +5,7 @@ import locale from './localeReducer';
 import users from './usersReducer';
 import errors from './errorReducer';
 import loading from './loadingReducer';
+import products from './productsReducer';
 
 const navReducer = createNavigationReducer(App);
 
@@ -14,4 +15,5 @@ export default combineReducers({
   users,
   errors,
   loading,
+  products,
 });

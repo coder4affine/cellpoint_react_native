@@ -6,7 +6,7 @@ import { ErrorMessage } from 'formik';
 import Text from '../text/Text';
 
 const TextInput = ({
-  field, // { name, value, onChange, onBlur }
+  field: { onChange, ...rest },
   form: { setFieldValue }, // also values, setXXXX, handleXXXX, dirty, isValid, status, etc.
   ...props
 }) => {
@@ -22,25 +22,18 @@ const TextInput = ({
           height: 44,
           borderRadius: 4,
         }}
-        onChangeText={txt => setFieldValue(field.name, txt)}
-        {...field}
+        onChangeText={txt => setFieldValue(rest.name, txt)}
+        {...rest}
         {...props}
       />
-      <ErrorMessage name={field.name}>{msg => <Text variant="error">{msg}</Text>}</ErrorMessage>
+      <ErrorMessage name={rest.name}>{msg => <Text variant="error">{msg}</Text>}</ErrorMessage>
     </View>
   );
 };
 
 TextInput.propTypes = {
-  field: PropTypes.objectOf({
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    onBlur: PropTypes.func.isRequired,
-  }).isRequired,
-  form: PropTypes.objectOf({
-    setFieldValue: PropTypes.func.isRequired,
-  }).isRequired,
+  field: PropTypes.object.isRequired,
+  form: PropTypes.object.isRequired,
 };
 
 export default TextInput;

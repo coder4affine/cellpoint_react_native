@@ -82,7 +82,7 @@ class Login extends Component {
                 textStyle={{color: theme.primary.contrastText}}
               />
               <Button
-                onPress={() => this.props.changeLocale({locale: 'es'})}
+                onPress={() => this.props.navigation.navigate('App')}
                 containerStyle={{
                   backgroundColor: 'transparent',
                   borderWidth: 0.5,
